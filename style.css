@@ -1,0 +1,497 @@
+/******************** Body ********************/
+
+body {
+  padding: 0px;
+  margin: 0px;
+  background: snow;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, snow 0%, snow 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, snow 0%, snow 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, snow 0%, snow 100%);
+}
+
+/* Body characteristics for project pages */
+.intro_unlim {
+    position: relative;
+    text-align: justify;
+    width: 50%;
+    margin: auto;
+    
+}
+
+@media screen and (max-device-width: 488px) {
+   .intro_unlim {
+    width: 80%;
+    } 
+}
+
+/* Titles */
+
+h1 {
+  color: mediumseagreen;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 300%;
+  line-height: 76px;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  top: 20%;
+}
+
+h2 {
+  color: whitesmoke;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  text-align: left;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+h2.center {
+  text-align: center;
+}
+
+/* Social Media Buttons */
+.social_media_logos { 
+    display: inline-block;
+    display: flex;
+    align-items: flex-start;                 /*  vertical align top  */
+
+}
+
+.social_media_logos > *:nth-child(7) { 
+    margin-right: auto;                      /*  move all beyond the 5th  */
+}
+
+/* Accordion Buttons */
+
+button.accordion {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: silver;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+button.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2212";
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: ;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 2s ease-out;
+    -moz-transition: height 2s; /* Firefox 4 */
+    -webkit-transition: height 2s; /* Safari and Chrome */
+    -o-transition: height 2s; /* Opera */
+}
+
+/* Life Token */
+.token {
+  width: 7% ;
+  height: 7% ;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+@media screen and (max-device-width: 488px) {
+   .token {
+    width: 20%;
+    height: 20% ;
+    } 
+}
+
+/* Tab Icon */
+.img-icon {
+  width: 20% ;
+  height: 20% ;
+  float: left;
+}
+
+/* Profile Photo */
+#profile_photo{
+    width: 300px;
+    position: relative;
+    float: left;
+    clear: left;
+    margin: 20px;    display: block;
+    margin: 20px;    border-radius: 100%;
+}
+
+/* Return to Homepage */
+.return {
+    position: relative;
+    text-align: justify;
+    width: 50%;
+    height: 100px;
+    margin: auto;
+}
+
+@media screen and (max-device-width: 488px) {
+   .return {
+    width: 80%;
+    } 
+}
+
+/* Miscellaneous */
+
+ul {
+  margin: 0 auto;
+  padding: 0;
+  width: 50%;
+}
+
+/* project box sizes for mobile devices */
+@media screen and (max-device-width: 488px) {
+   ul {
+    width: 80%;
+    } 
+}
+
+li {
+  border-bottom: 1px solid #E4BB97;
+  list-style: none;
+  margin: 40px 0px;
+  padding-bottom: 40px;
+}
+
+a {
+  color: #214E34;
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  font-weight: 900;
+  text-align: left;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+
+a.seagreen {
+  color: mediumseagreen;
+}
+
+/* black outlines around project boxes */
+a.black {
+  color: black;
+}
+
+p {
+  color: #444444;
+  line-height: 32px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+/* x is p equivalent without corresponding space */
+x {
+  color: #444444;
+  line-height: 32px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+/* y is a equivalent without corresponding link */
+y {
+  color: mediumseagreen;
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  font-weight: 900;
+  text-align: left;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+/******************** Header and Footer ********************/
+
+.headerU {
+  background: url("https://c1.staticflickr.com/3/2488/32150102944_5fd8123c66_b.jpg") repeat center center;
+  height: 200px;
+}
+
+.footerU {
+  background: url("https://c1.staticflickr.com/3/2488/32150102944_5fd8123c66_b.jpg") repeat center top;
+  height: 150px;
+}
+
+.footerU2 {
+  background: url("https://c1.staticflickr.com/3/2488/32150102944_5fd8123c66_b.jpg") repeat center 0px;
+  height: 100px;
+}
+
+
+
+/******************** Projects ********************/
+
+.projects {
+    border-style: solid;
+    width: 100%;
+    height: 100%;
+    /**  min-width: 630px;   **/
+    min-height: 200px;
+}
+
+.crazyhearts {
+    background:url("https://c1.staticflickr.com/5/4321/36112755175_f7f9ba8b84_b.jpg") no-repeat 0% 30%;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+}
+
+.broclock {
+    background:url("https://c1.staticflickr.com/5/4379/36836181270_a9cdab0a3a_o.jpg") no-repeat 0% 30%;
+    background-size: cover;
+    width: 100%   
+}
+
+.mother {
+    background:url("https://c1.staticflickr.com/5/4329/35978369221_df0b770ff2_b.jpg") no-repeat 0% 30%;
+    background-size: cover;
+    width: 100%
+}
+
+.gradcap {
+    background:url("https://c1.staticflickr.com/3/2535/32611303730_fa26684258_b.jpg") no-repeat 0% 30%;
+    background-size: cover;
+    width: 100%
+}
+
+.wgift {
+    background:url("https://c1.staticflickr.com/3/2752/32992933415_1cdb4a106b_b.jpg") no-repeat 0% 30%;
+    background-size: cover;
+    width: 100%
+}
+
+.koacl {
+    background:url("https://c1.staticflickr.com/3/2072/32995410585_9d146e45b0_b.jpg") no-repeat 0% 60%;
+    background-size: cover;
+    width: 100%
+}
+
+.astrocl {
+    background:url("https://c1.staticflickr.com/5/4384/36740209673_1d4d41efe8_o.jpg") no-repeat 0% 35%;
+    background-size: cover;
+    width: 100%
+}
+
+.astrowood {
+    background:url("https://c1.staticflickr.com/3/2794/32996020385_dc924466fa_b.jpg") no-repeat 0% 5%;
+    background-size: cover;
+    width: 100%
+}
+
+.ottosim {
+    background:url("https://c1.staticflickr.com/3/2428/32870148951_361b44c237_b.jpg") no-repeat 0% 40%;
+    background-size: cover;
+    width: 100%
+}
+
+.csd {
+    background:url("https://c1.staticflickr.com/3/2938/34147173976_e28cca0988_b.jpg") no-repeat 0% 10%;
+    background-size: cover;
+    width: 100%
+}
+
+.sfcbenslay {
+    background:url("https://farm3.staticflickr.com/2809/34056959871_9a77b2db08_b.jpg") no-repeat 0% 35%;
+    background-size: cover;
+    width: 100%
+}
+
+.cuttingboard {
+    background:url("https://c1.staticflickr.com/5/4169/34355294230_9c84dc0d30_b.jpg") no-repeat 0% 40%;
+    background-size: cover;
+    width: 100%
+}
+
+.contraption {
+    background:url("https://c1.staticflickr.com/3/2945/33377180683_9c7b27232f_b.jpg") no-repeat 0% 25%;
+    background-size: cover;
+    width: 100%
+}
+
+.ms4gifts {
+    background:url("https://farm3.staticflickr.com/2937/33345710234_24d8fa186b_b.jpg") no-repeat 0% 20%;
+    background-size: cover;
+    width: 100%
+}
+
+.cptwynn {
+    background:url("https://c1.staticflickr.com/3/2893/34188163885_1d6a573b34_b.jpg") no-repeat 0% 20%;
+    background-size: cover;
+    width: 100%
+}
+
+.diatom {
+    background:url("https://c1.staticflickr.com/3/2930/33345918204_f520f7566b_b.jpg") no-repeat 0% 0%;
+    background-size: cover;
+    width: 100%
+}
+
+/******************** Image Modals ********************/
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 1.0;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Modal Content (image) Variation for Columns Page */
+.modal img {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+/******************** Grid Items ********************/
+
+.full {
+    position: relative;
+    text-align: justify;
+    width: 50%;
+    margin: auto;
+}
+
+* { box-sizing: border-box; }
+
+/* force scrollbar */
+html { overflow-y: scroll; }
+
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+.grid {
+    background: ;
+}
+
+/* clear fix */
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ---- .grid-item ---- */
+.grid-sizer,
+.grid-item {
+    width: 32.55%;
+    margin-bottom: 10px;
+}
+
+.grid-item {
+    float: left;
+}
+
+.grid-item img {
+    display: block;
+    max-width: 100%;
+}
