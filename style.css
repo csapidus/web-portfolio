@@ -266,6 +266,13 @@ y {
     position: relative;
 }
 
+.gtbox {
+    background:url("https://c1.staticflickr.com/5/4536/37674678305_2fc9c71e89_k.jpg") no-repeat 0% 85%;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+}
+
 .broclock {
     background:url("https://c1.staticflickr.com/5/4379/36836181270_a9cdab0a3a_o.jpg") no-repeat 0% 30%;
     background-size: cover;
