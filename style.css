@@ -266,6 +266,13 @@ y {
     position: relative;
 }
 
+.spiral {
+    background:url("https://c1.staticflickr.com/5/4648/39670988081_beab645f62_o.jpg") no-repeat 0% 30%;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+}
+
 .reidulator {
     background:url("https://c1.staticflickr.com/5/4727/38595437585_c8d499cb01_k.jpg") no-repeat 0% 30%;
     background-size: cover;
