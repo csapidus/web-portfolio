@@ -266,6 +266,20 @@ y {
     position: relative;
 }
 
+.diatom {
+    background:url("https://c1.staticflickr.com/5/4678/26627315088_8966710d70_k.jpg") no-repeat 0% 30%;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+}
+
+.doof {
+    background:url("https://c1.staticflickr.com/5/4655/26530073298_71ed4a7e12_k.jpg") no-repeat 0% 30%;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+}
+
 .spiral {
     background:url("https://c1.staticflickr.com/5/4648/39670988081_beab645f62_o.jpg") no-repeat 0% 30%;
     background-size: cover;
@@ -367,12 +381,6 @@ y {
 
 .cptwynn {
     background:url("https://c1.staticflickr.com/3/2893/34188163885_1d6a573b34_b.jpg") no-repeat 0% 20%;
-    background-size: cover;
-    width: 100%
-}
-
-.diatom {
-    background:url("https://c1.staticflickr.com/3/2930/33345918204_f520f7566b_b.jpg") no-repeat 0% 0%;
     background-size: cover;
     width: 100%
 }
