@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<!-- <div id="loading"></div> -->
+<!-- <div id="page"> -->
+<head>
+    <!-- Tab Title -->
+    <title>Mahdi Al-Husseini</title>
+    
+    <!-- Tab Icon --> 
+    <link rel="icon" href="https://c1.staticflickr.com/5/4304/35858762401_3288711c9e_o.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Raleway:100,500,600,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet"> 
+    
+    <!-- Link to CSS -->
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    
+    <!-- For Media Queries
+    <meta name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1">  -->
+    
+</head>
+    
+<body>   
+    <br><br><br><br>
+
+    <img class ="center" src="https://c2.staticflickr.com/8/7857/47014923132_d52f5e2ef8_b.jpg" alt="" height="250" style=""/> 
+
+    <br><br>
+
+    <div class="topnav">
+      <a class="active" href="#home">Portfolio</a>
+      <a href="#patents">Patents</a>
+      <a href="#news">Writing</a>
+      <a href="#contact">About</a>
+      <a href="#about">Contact</a>
+    </div> 
+
+    <li></li>
+
+    <div class="grid">
+
+      <div class="grid-sizer"></div>
+
+      <div class="grid-item">
+        <img id="Img1" class = "modal-img" data-index = "1" src="https://c1.staticflickr.com/5/4320/35945272960_59e1b2dec4_b.jpg"/>
+      </div>
+
+      <div id="myModal1" class="modal" data-index="1">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="img01">
+          <div id="caption">final product: paduak and maple stand with etched acrylic presented to SFC Gary Benslay (ret.) outside of the Okeefe Army ROTC building</div>
+      </div>
+
+      <div class="grid-item">
+        <img id="Img2" class = "modal-img" data-index = "2" src="https://c1.staticflickr.com/5/4416/36316878296_82d8d27bf8_b.jpg"/>
+      </div>
+
+      <div id="myModal2" class="modal" data-index="2">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="img02">
+          <div id="caption">routing acrylic insertion into the unlacquered padauk and maple stand</div>
+      </div>
+
+      <div class="grid-item">
+        <img id="Img3" class = "modal-img" data-index = "3" src="https://c1.staticflickr.com/5/4350/36361234385_6979021034_b.jpg"/>
+      </div>
+
+      <div id="myModal3" data-index="3" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="img03">
+          <div id="caption">lacquered padauk and maple stand</div>
+      </div>
+
+      <div class="grid-item">
+        <img id="Img4" class = "modal-img" data-index = "4" src="https://c1.staticflickr.com/5/4347/36317169416_0d2d3dbcbf_b.jpg"/>
+      </div>
+
+      <div id="myModal4" data-index="4" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="img04">
+          <div id="caption">3-D model of paduak stand</div>
+      </div>
+
+      <div class="grid-item">
+        <img id="Img5" class = "modal-img" data-index = "5" src="https://c1.staticflickr.com/5/4346/36192944472_200f4e76a1_o.jpg"/>
+      </div>
+
+      <div id="myModal5" data-index="5" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="img05">
+          <div id="caption">3-D model of paduak stand with acrylic insertion</div>
+      </div>
+
+    </div>
+
+<br>
+
+<!-- Facebook -->
+<a href="https://www.facebook.com/m.mahdi.al.husseini"><img style = "margin: 10px" src="https://c1.staticflickr.com/5/4316/36105018256_9d0df26808_o.png" alt="" width= "40" height= "40" /></a>
+
+<!-- LinkedIn -->
+<a href="https://www.linkedin.com/in/mahdi-al-husseini-0aa98678/"><img style = "margin: 10px" src="https://c1.staticflickr.com/5/4292/35304750524_b7a7b46958_o.png" alt="" width= "40" height= "40" /></a>
+
+<!-- Instagram -->
+<a href="https://www.instagram.com/alhusseinimahdi/"><img style = "margin: 10px" src="https://c1.staticflickr.com/5/4296/36011295361_36583c28fb_o.png" alt="" width="40" height="40" filter="grayscale(100%)" /></a>
+
+<!-- GitHub -->
+<a href="https://github.com/csapidus"><img style = "margin: 10px" src="https://c1.staticflickr.com/5/4425/36376344962_247a7a8266_o.png" alt="" width="40" height="40" filter="grayscale(100%)"/></a>
+
+<br><br>
+
+all work © Mahdi Al-Husseini 2014 - 2019 • all rights reserved • to license images, get in touch
+
+<br><br>
+    
+</body>
+
+
+<script src="../jquery-3.2.1.min.js"></script>
+<script src='../masonry.pkgd.min.js'></script>
+<!-- <script src="js/bootstrap.min.js"></script> -->
+<script src="../imagesloaded.pkgd.js"></script>
+    
+<script>    
+  // JQuery Method for Multiple Modals 
+  $(function() {
+  	$('body').on('click', '.modal-img', function(event) {
+      var $img = $(event.target);
+      var index = $img.data('index');
+      var $modal = $("#myModal" + index);
+      $modal.find('img').attr('src', $img.attr('src'));
+      $modal.find('#caption').text($img.attr('alt'));
+      $modal.css('display', 'block');
+    });
+
+    $('body').on('click', '.modal .close', function(event) {
+      var $modal = $(event.target).closest('.modal');
+      $modal.css('display', 'none');
+    });
+  });
+    
+</script>
+    
+<script>
+    // JQuery Method for Masonry
+    var $grid = $('.grid').masonry({
+      itemSelector: '.grid-item',
+      percentPosition: true,
+      columnWidth: '.grid-sizer',
+      gutter: 5
+    });
+    // layout Isotope after each image loads
+    $grid.imagesLoaded().progress( function() {
+      $grid.masonry('layout');
+    });  
+    
+</script>
+    
+</html>

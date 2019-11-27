@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    
+    <!-- <meta charset="utf-8"> -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    
+    <title>Reverse-Polish-Notation (RPN) Nixie Calculator: The Reidulator Prototype</title>
+    <link rel="icon" href="https://c1.staticflickr.com/5/4304/35858762401_3288711c9e_o.png">
+    <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Raleway:100,500,600,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    
+    <!-- For Media Queries
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">  -->
+    
+</head>
+    
+<body>
+    
+    <div class="footerU">
+        <h1>Reverse-Polish-Notation (RPN) Nixie Calculator</h1>
+    </div>
+    
+    <div class="intro_unlim">
+        <p> Turns out there is more to nixie tubes than clocks! In an effort to become acquainted with microcontrollers, utilize nixies differently, and apply the RPN concept introduced to me by good friend Reid Graves, I elected to develop (without a kit) an RPN nixie calculator. Many headaches and one shorted Arduino later, it works! The wiring was messier than expected. Uses six IN-12 nixie tubes and an I2C LCD for a double display. Controlled with an Arduino Mega (knockoff) assisted by six K155iD1 nixie drivers. Includes a calculator-display specific matrix keypad. The plan over the coming couple months is to develop a custom PCB and encase in Zircote wood, while replacing the current keypad with Cherry MX Red key switches and caps. Also hoping to expand the display size from six to eight nixies, and add new operations (log(), e, etc.). </p>
+        
+        <p> Estimated Building Cost: $110.00</p>
+
+        <div class="grid">
+            
+          <div class="grid-sizer"></div>
+            
+          <div class="grid-item">
+            <img id="Img1" class = "modal-img" data-index = "1" src="https://c1.staticflickr.com/5/4727/38595437585_c8d499cb01_k.jpg"/>
+          </div>
+            
+          <div id="myModal1" class="modal" data-index="1">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="img01">
+              <div id="caption">final product: RPN nixie calculator with all digits set to zero</div>
+          </div>
+            
+          <div class="grid-item">
+            <img id="Img2" class = "modal-img" data-index = "2" src="https://c1.staticflickr.com/5/4645/27696632809_4747df1fe0_k.jpg"/>
+          </div>
+            
+          <div id="myModal2" class="modal" data-index="2">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="img02">
+              <div id="caption">final product: top-view shot</div>
+          </div>
+        
+          <div class="grid-item">
+            <img id="Img3" class = "modal-img" data-index = "3" src="https://c1.staticflickr.com/5/4635/38595462265_b7f0ac8e91_b.jpg"/>
+          </div>
+            
+          <div id="myModal3" data-index="3" class="modal">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="img03">
+              <div id="caption">two nixies being tested</div>
+          </div>
+                    
+          <div class="grid-item">
+            <img id="Img4" class = "modal-img" data-index = "4" src="https://c1.staticflickr.com/5/4594/38595492955_fe0be83163_k.jpg"/>
+          </div>
+            
+          <div id="myModal4" data-index="4" class="modal">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="img04">
+              <div id="caption">initial (working) set-up </div>
+          </div>
+            
+          <div class="grid-item">
+            <img id="Img5" class = "modal-img" data-index = "5" src="https://c1.staticflickr.com/5/4738/38595501435_7a80fdaea3_k.jpg"/>
+          </div>
+            
+          <div id="myModal5" data-index="5" class="modal">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="img05">
+              <div id="caption">initial gathering of requisite materials</div>
+          </div>
+            
+          <div class="grid-item">
+            <img id="Img6" class = "modal-img" data-index = "6" src="https://c1.staticflickr.com/5/4750/26530074008_ae44a3d580_k.jpg"/>
+          </div>
+            
+          <div id="myModal6" data-index="6" class="modal">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="img06">
+              <div id="caption">developing a custom cherry-blue switch based matrix keypad, no keycaps. uses sparkfun breakout boards</div>
+          </div>
+            
+          <div class="grid-item">
+            <img id="Img7" class = "modal-img" data-index = "7" src="https://c1.staticflickr.com/5/4622/26530073808_70e7a413ab_k.jpg"/>
+          </div>
+            
+          <div id="myModal7" data-index="7" class="modal">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="img07">
+              <div id="caption">angled shot of a custom cherry-blue switch based matrix keypad, no keycaps. uses sparkfun breakout boards</div>
+          </div>
+            
+          <div class="grid-item">
+            <img id="Img8" class = "modal-img" data-index = "8" src="https://c1.staticflickr.com/5/4661/26530073638_53e2a7345f_k.jpg"/>
+          </div>
+            
+         <div id="myModal8" data-index="8" class="modal">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="img08">
+              <div id="caption"> custom cherry-blue switch based matrix keypad with keycaps. note - no equals sign!</div>
+          </div>
+            
+          <div class="grid-item">
+            <img id="Img9" class = "modal-img" data-index = "9" src="https://c1.staticflickr.com/5/4743/26530073748_3974fdf18c_k.jpg"/>
+          </div>
+            
+          <div id="myModal9" data-index="9" class="modal">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="img09">
+              <div id="caption">angled shot of custom cherry-blue switch based matrix keypad with keycaps. note - no equals sign! Excuse the glare!</div>
+          </div>
+                    
+        </div>
+
+    </div>
+    
+    <br>
+            
+    <div class="return"> 
+        <div id="button"><a href="../index.html">Return to Homepage</a></div>
+    </div>
+    
+</body>
+
+
+<script src="../jquery-3.2.1.min.js"></script>
+<script src='../masonry.pkgd.min.js'></script>
+<!-- <script src="js/bootstrap.min.js"></script> -->
+<script src="../imagesloaded.pkgd.js"></script>
+    
+<script>    
+  // JQuery Method for Multiple Modals 
+  $(function() {
+  	$('body').on('click', '.modal-img', function(event) {
+      var $img = $(event.target);
+      var index = $img.data('index');
+      var $modal = $("#myModal" + index);
+      $modal.find('img').attr('src', $img.attr('src'));
+      $modal.find('#caption').text($img.attr('alt'));
+      $modal.css('display', 'block');
+    });
+
+    $('body').on('click', '.modal .close', function(event) {
+      var $modal = $(event.target).closest('.modal');
+      $modal.css('display', 'none');
+    });
+  });
+    
+</script>
+    
+<script>
+    // JQuery Method for Masonry
+    var $grid = $('.grid').masonry({
+      itemSelector: '.grid-item',
+      percentPosition: true,
+      columnWidth: '.grid-sizer',
+      gutter: 5
+    });
+    // layout Isotope after each image loads
+    $grid.imagesLoaded().progress( function() {
+      $grid.masonry('layout');
+    });  
+    
+</script>
+
+
+<div class="footerU2">
+    <h1></h1>
+</div>
+    
+</html>

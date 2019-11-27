@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    
+    <!-- <meta charset="utf-8"> -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    
+    <title>RIT Undergraduate Workshop on Dynamics of Excitable Systems, Jan 2018</title>
+    <link rel="icon" href="https://c1.staticflickr.com/5/4304/35858762401_3288711c9e_o.png">
+    <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Raleway:100,500,600,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    
+    <!-- For Media Queries
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">  -->
+    
+</head>
+    
+<body>
+    
+    <div class="footerU">
+        <h1>Spiral Waves in Cardiac Dynamics [RIT Workshop]</h1>
+    </div>
+    
+    <div class="intro_unlim">
+        <p> I was fortunate enough to attend a NSF-sponsored workshop on cardiac dynamics, led by professors Flavio Fenton (Geogia Tech) and Elizabeth Cherry (Rochester Institute of Technology). More to come ...</p>
+
+        <div class="grid">
+            
+          <div class="grid-sizer"></div>
+
+          <div class="grid-item">
+            <img id="Img1" class = "modal-img" data-index = "1" src="https://c1.staticflickr.com/5/4648/39670988081_beab645f62_o.jpg"/>
+          </div>
+
+          <div id="myModal1" class="modal" data-index="1">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="img01">
+              <div id="caption">mapping spiral wave dynamics for various concentrations of sodium and calcium</div>
+          </div>
+
+          <div class="grid-item">
+            <img id="Img2" class = "modal-img" data-index = "2" src="https://c1.staticflickr.com/1/790/40716342524_1134c8c49d_h.jpg"/>
+          </div>
+
+          <div id="myModal2" class="modal" data-index="2">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="img02">
+              <div id="caption">the gang at RIT</div>
+          </div>
+
+                                
+        </div>
+
+    </div>
+    
+    <br>
+    
+    <div class="return"> 
+        <div id="button"><a href="../index.html">Return to Homepage</a></div>
+    </div>
+    
+</body>
+
+
+<script src="../jquery-3.2.1.min.js"></script>
+<script src='../masonry.pkgd.min.js'></script>
+<!-- <script src="js/bootstrap.min.js"></script> -->
+<script src="../imagesloaded.pkgd.js"></script>
+    
+<script>    
+  // JQuery Method for Multiple Modals 
+  $(function() {
+  	$('body').on('click', '.modal-img', function(event) {
+      var $img = $(event.target);
+      var index = $img.data('index');
+      var $modal = $("#myModal" + index);
+      $modal.find('img').attr('src', $img.attr('src'));
+      $modal.find('#caption').text($img.attr('alt'));
+      $modal.css('display', 'block');
+    });
+
+    $('body').on('click', '.modal .close', function(event) {
+      var $modal = $(event.target).closest('.modal');
+      $modal.css('display', 'none');
+    });
+  });
+    
+</script>
+    
+<script>
+    // JQuery Method for Masonry
+    var $grid = $('.grid').masonry({
+      itemSelector: '.grid-item',
+      percentPosition: true,
+      columnWidth: '.grid-sizer',
+      gutter: 5
+    });
+    // layout Isotope after each image loads
+    $grid.imagesLoaded().progress( function() {
+      $grid.masonry('layout');
+    });  
+    
+</script>
+
+
+<div class="footerU2">
+    <h1></h1>
+</div>
+    
+</html>

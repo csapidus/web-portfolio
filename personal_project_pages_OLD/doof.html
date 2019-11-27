@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    
+    <!-- <meta charset="utf-8"> -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    
+    <title>Doofinator</title>
+    <link rel="icon" href="https://c1.staticflickr.com/5/4304/35858762401_3288711c9e_o.png">
+    <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Raleway:100,500,600,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    
+    <!-- For Media Queries
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">  -->
+    
+</head>
+    
+<body>
+    
+    <div class="footerU">
+        <h1>The Doofinator Magic-Eye and Nixie Radio</h1>
+    </div>
+    
+    <div class="intro_unlim">
+        <p> It may sound silly, but this project was a childhood tribute to one of my favorite fictional inventors - Dr. Doofenshmirtz from Phineas and Ferb. In each episode Doofenshmirtz would develop a new maniacal invention, always knighted with the suffix "inator". On start-up and shut-down, this radio plays the Doofenshmirtz evil jingle (a running gag from the show). There are three switches - one for power, one for FM radio, and one for a playlist of songs sung by Doofenshmirtz (and friends). This was my first time messing with magic-eye tube, and a 6E5 was included with audio modulation. Fine-grid IN-8 nixie tubes light up the channel numbers for the FM radio. This project was a great way to get acquainted with different vacuum tubes, arduino shields, and general audio work. </p>
+        
+        <p> Estimated Building Cost: $200.00</p>
+
+        <div class="grid">
+            
+          <div class="grid-sizer"></div>
+
+          <div class="grid-item">
+            <img id="Img1" class = "modal-img" data-index = "1" src="https://c1.staticflickr.com/5/4655/26530073298_71ed4a7e12_k.jpg"/>
+          </div>
+
+          <div id="myModal1" class="modal" data-index="1">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="img01">
+              <div id="caption"> it was at this point in project development that I realized I needed to stop adding functionality and start protoboarding ... </div>
+          </div>
+
+          <div class="grid-item">
+            <img id="Img2" class = "modal-img" data-index = "2" src="https://c1.staticflickr.com/5/4652/26530073458_33d55e8d8f_k.jpg"/>
+          </div>
+
+          <div id="myModal2" class="modal" data-index="2">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="img02">
+              <div id="caption">it took much longer than it should have to get this 6E5 up and running, but once it worked, it was spectacular. a gorgeous magic-eye running on a cheap kit purchased from ebay. </div>
+          </div>
+
+          <div class="grid-item">
+            <img id="Img3" class = "modal-img" data-index = "3" src="https://c1.staticflickr.com/5/4751/26530074148_abc64f77f3_k.jpg"/>
+          </div>
+
+          <div id="myModal3" data-index="3" class="modal">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="img03">
+              <div id="caption">FM radio functionality implemented succesfully, but was having issues with the bluetooth-module. later switched to an arduino audio shield. switched out one speaker for two</div>
+          </div>
+
+          <div class="grid-item">
+            <img id="Img4" class = "modal-img" data-index = "4" src="https://c1.staticflickr.com/5/4665/26530074358_29b6a7ed48_k.jpg"/>
+          </div>
+
+          <div id="myModal4" data-index="4" class="modal">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="img04">
+              <div id="caption">after about a few hours of reading and testing, the FM radio is coming together</div>
+          </div>
+                                
+        </div>
+
+    </div>
+    
+    <br>
+    
+    <div class="return"> 
+        <div id="button"><a href="../index.html">Return to Homepage</a></div>
+    </div>
+    
+</body>
+
+
+<script src="../jquery-3.2.1.min.js"></script>
+<script src='../masonry.pkgd.min.js'></script>
+<!-- <script src="js/bootstrap.min.js"></script> -->
+<script src="../imagesloaded.pkgd.js"></script>
+    
+<script>    
+  // JQuery Method for Multiple Modals 
+  $(function() {
+  	$('body').on('click', '.modal-img', function(event) {
+      var $img = $(event.target);
+      var index = $img.data('index');
+      var $modal = $("#myModal" + index);
+      $modal.find('img').attr('src', $img.attr('src'));
+      $modal.find('#caption').text($img.attr('alt'));
+      $modal.css('display', 'block');
+    });
+
+    $('body').on('click', '.modal .close', function(event) {
+      var $modal = $(event.target).closest('.modal');
+      $modal.css('display', 'none');
+    });
+  });
+    
+</script>
+    
+<script>
+    // JQuery Method for Masonry
+    var $grid = $('.grid').masonry({
+      itemSelector: '.grid-item',
+      percentPosition: true,
+      columnWidth: '.grid-sizer',
+      gutter: 5
+    });
+    // layout Isotope after each image loads
+    $grid.imagesLoaded().progress( function() {
+      $grid.masonry('layout');
+    });  
+    
+</script>
+
+
+<div class="footerU2">
+    <h1></h1>
+</div>
+    
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    
+    <!-- <meta charset="utf-8"> -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    
+    <title>MEDEVAC Dispatch Efficiency Simulation</title>
+    <link rel="icon" href="https://c1.staticflickr.com/5/4304/35858762401_3288711c9e_o.png">
+    <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Raleway:100,500,600,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    
+    <!-- For Media Queries
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">  -->
+    
+</head>
+    
+<body>
+    
+    <div class="footerU">
+        <h1>MEDEVAC Dispatch Simulation</h1>
+    </div>
+    
+    <div class="intro_unlim">
+        <p> This NetLogo simulation examining different MEDEVAC dispatch policies was developed for the Army Medical Department Basic Officer Leadership Course (AMEDD BOLC). This is my second custom-made NetLogo simulation. NetLogo boils down to two concepts - turtles and patches. In this case, the turtles (objects) took the form of MEDEVACs casualties and medical treatment facilities (MTFs), and patches (locations) took the form of four provinces in Southern Afghanistan. Attached is a powerpoint detailing the input parameters, metrics, and different dispatch policies. </p>
+        
+        <p> Estimated Building Cost: $00.00</p>
+        <p> Estimated Hours to Develop: 26 </p>
+        <br>
+        <a href="https://ccl.northwestern.edu/netlogo/download.shtml">NetLogo Download Link</a>
+        <br>
+        <br>
+        <a href="/dispatch_efficiency.nlogo" download>MEDEVAC Dispatch Simulation Download</a>
+        <br>
+        <br>
+        <a href="/student_brief.pdf" download>AMEDD BOLC Brief</a>
+        <br>
+        <br>
+        <a href="/yellow_paper_dispatch.pdf" download>Technical Report (Two-Pager) </a>
+    
+    <br>
+    <br>
+    
+        <div class="grid">
+            
+          <div class="grid-sizer"></div>
+            
+          <div class="grid-item">
+            <img id="Img1" class = "modal-img" data-index = "1" src="https://c2.staticflickr.com/2/1771/43115116614_d780bab887_b.jpg"/>
+          </div>
+            
+          <div id="myModal1" class="modal" data-index="1">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="img01">
+              <div id="caption">MEDEVAC Dispatch Policy NetLogo Simulation</div>
+          </div>
+                                              
+        </div>
+
+    </div>
+    
+    <br>
+        
+    <div class="return"> 
+        <div id="button"><a href="../index.html">Return to Homepage</a></div>
+    </div>
+    
+</body>
+
+
+<script src="../jquery-3.2.1.min.js"></script>
+<script src='../masonry.pkgd.min.js'></script>
+<!-- <script src="js/bootstrap.min.js"></script> -->
+<script src="../imagesloaded.pkgd.js"></script>
+    
+<script>    
+  // JQuery Method for Multiple Modals 
+  $(function() {
+  	$('body').on('click', '.modal-img', function(event) {
+      var $img = $(event.target);
+      var index = $img.data('index');
+      var $modal = $("#myModal" + index);
+      $modal.find('img').attr('src', $img.attr('src'));
+      $modal.find('#caption').text($img.attr('alt'));
+      $modal.css('display', 'block');
+    });
+
+    $('body').on('click', '.modal .close', function(event) {
+      var $modal = $(event.target).closest('.modal');
+      $modal.css('display', 'none');
+    });
+  });
+    
+</script>
+    
+<script>
+    // JQuery Method for Masonry
+    var $grid = $('.grid').masonry({
+      itemSelector: '.grid-item',
+      percentPosition: true,
+      columnWidth: '.grid-sizer',
+      gutter: 5
+    });
+    // layout Isotope after each image loads
+    $grid.imagesLoaded().progress( function() {
+      $grid.masonry('layout');
+    });  
+    
+</script>
+
+
+<div class="footerU2">
+    <h1></h1>
+</div>
+    
+</html>
